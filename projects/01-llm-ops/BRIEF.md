@@ -86,6 +86,10 @@ Every milestone ends with a **"done when"** you can demo or point to in the repo
 
 **Done when:** you can open a single slow request in the trace view and explain where the time went.
 
+**What the dashboard should look like** (illustrative, synthetic data). Note the SLO line on latency, errors split by class, the fallback spike during a provider outage, and the error budget burning down:
+
+![Example LLM service dashboard](images/example-dashboard.png)
+
 ### M4 — CI/CD with an eval gate
 - On every PR, run unit tests, then the eval on `test` (or a fast stratified subset on PRs and the full set nightly).
 - Compare against the baseline from `main`. **Fail the PR** if accuracy drops more than your threshold (e.g. 2 points), or if p95 latency or cost per request regress by more than your threshold (e.g. 15%).
@@ -141,7 +145,7 @@ The error budget is what makes these useful: at 99% availability you're allowed 
 
 ## 6. Artifacts to commit
 
-- [ ] `README.md` filled in from the [template](README_TEMPLATE.md), with headline numbers above the fold
+- [ ] `README.md` with headline numbers (each with a baseline) above the fold
 - [ ] Architecture diagram (Mermaid in the README is fine)
 - [ ] `results/` containing the baseline and current eval JSON, plus load-test output
 - [ ] `ops/grafana/*.json` dashboard and a screenshot under real load

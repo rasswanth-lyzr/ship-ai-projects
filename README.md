@@ -28,20 +28,13 @@ The topic isn't what separates the two piles. **A pile-one project shows that so
 | 02 | [**Agent Evals**](projects/02-agent-evals/BRIEF.md) | Track an agent's accuracy and hallucinations, and make it improve from its own failures | Define correctness, build graders you can trust, improve without regressions | 3–4 weeks |
 | 03 | [**Auto Routing**](projects/03-auto-routing/BRIEF.md) | Send each request to the cheapest model that will get it right | Make cost/quality tradeoffs with real baselines and honest evaluation | 2–3 weeks |
 
-Each project folder has two files:
-
-- `BRIEF.md`: the spec. It covers the scenario, architecture, milestones with "done when" criteria, the metrics to track, the artifacts to commit, stretch goals, red flags, and the interview questions you'll get.
-- `README_TEMPLATE.md`: copy it into your repo on day one and fill it in as you build.
+Each project folder has a `BRIEF.md`, the full spec. It covers the scenario, architecture, milestones with "done when" criteria, the metrics to track, the artifacts to commit (with example charts showing what yours should look like), stretch goals, red flags, and the interview questions you'll get.
 
 ## How to use this repo
 
 1. **Pick one project and go deep.** One finished project with real numbers beats three half-built ones.
 2. **Read the whole brief before writing code.** The must-have milestones set the bar. Stretch goals are how you stand out.
-3. **Copy the README template on day one.** If you can't fill in a section, that's your next task.
-4. **Before you share it**, run the checklist in [the 90-second scan](guides/the-90-second-scan.md).
-5. **Put it on your resume** using [the bullet formula](guides/resume-and-interview.md).
-
-Already have a pile-one project? [Upgrade it](guides/upgrade-pile-one.md) instead of starting from scratch.
+3. **Write the README as you build, not at the end.** Put the headline numbers (each with a baseline) and the hero chart from the brief at the top. If you can't fill in a section yet, that's your next task.
 
 ## Or build all three as one system
 
@@ -89,17 +82,13 @@ ship-ai-projects/
 ├── projects/
 │   ├── 01-llm-ops/
 │   │   ├── BRIEF.md
-│   │   └── README_TEMPLATE.md
+│   │   └── images/               ← example dashboard
 │   ├── 02-agent-evals/
 │   │   ├── BRIEF.md
-│   │   └── README_TEMPLATE.md
+│   │   └── images/               ← example improvement chart
 │   └── 03-auto-routing/
 │       ├── BRIEF.md
-│       └── README_TEMPLATE.md
-├── guides/
-│   ├── the-90-second-scan.md     ← what reviewers look at + ship checklist
-│   ├── resume-and-interview.md   ← resume bullets, interview walkthrough, post template
-│   └── upgrade-pile-one.md       ← turn an old project into a pile-two project
+│       └── images/               ← example cost-vs-quality plot
 └── RESOURCES.md                  ← papers, tools, datasets (all links checked)
 ```
 

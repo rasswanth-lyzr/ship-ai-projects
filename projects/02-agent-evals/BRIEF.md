@@ -129,6 +129,10 @@ In this project, "continuous learning" means **the system gets better from its o
 
 **Done when:** you've run **at least 3 iterations** and have a chart of holdout success, hallucination rate, and cost per success per iteration, plus a stacked bar of failure categories shrinking.
 
+**What that chart should look like** (illustrative, synthetic data). Every iteration is a gated change, holdout success carries a CI, and the failure-taxonomy bars show which fix removed which category:
+
+![Example improvement-over-iterations chart](images/example-iterations.png)
+
 ### M7 — Online evals (simulated is fine)
 - Run a **simulated user** (an LLM given a persona and a goal, as in τ-bench) against the deployed agent to generate traffic.
 - Score sampled traces with reference-free graders: hallucination checker, policy rules, tool errors, loop detection.
@@ -181,7 +185,7 @@ def pass_at_k(n: int, c: int, k: int) -> float:
 
 ## 6. Artifacts to commit
 
-- [ ] `README.md` from the [template](README_TEMPLATE.md), with the improvement chart above the fold
+- [ ] `README.md` with the improvement chart above the fold
 - [ ] `evals/tasks.jsonl` (versioned), graders, runner, and `make eval`
 - [ ] `docs/failure-taxonomy.md` with counts and example traces
 - [ ] `docs/judge-validation.md` with the agreement table and confusion matrix
